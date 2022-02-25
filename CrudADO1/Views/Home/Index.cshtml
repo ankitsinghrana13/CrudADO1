@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CrudADO1.Models.Children>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Children</h1> 
+    <table class="table table-bordered">
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Gender</th>
+    <th>Department</th>
+</tr>
+        @foreach(var child in Model)
+            {
+    <tr>
+        <td>@child.Id</td>
+        <td>@child.Name</td>
+        <td>@child.Email</td>
+        <td>@child.Mobile</td>
+        <td>@child.Gender</td>
+
+    </tr>
+            }
+    </table>
+
+</div>
